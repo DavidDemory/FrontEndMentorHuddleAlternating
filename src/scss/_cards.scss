@@ -1,0 +1,80 @@
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 3.33rem 0 1.38rem 0;
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 90%;
+        height: 488px;
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px rgba($color: $grayishBlue, $alpha: .25);
+        @media screen and (min-width: 1024px) {
+            &:nth-child(odd) {
+                .card--content {
+                    flex-direction: row-reverse;
+                }
+            }
+            max-width: 86%;
+        }
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+        &--content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            max-width: 73.8%;
+            height: 394px;
+            p {
+                font-size: 0.778rem;
+                color: $grayishBlue;
+                @media screen and (min-width: 1024px) {
+                    font-size: 1rem;
+                }
+            }
+            @media screen and (min-width: 1024px) {
+                height: 335px;
+                justify-content: space-evenly;
+                max-width: 100%;
+                flex-direction: row;
+            }
+        }
+        &--image {
+            width: 100%;
+            @media screen and (min-width: 730px) and (max-width: 1023px) {
+                width: 70%;
+                margin: 0 auto;
+            }
+            @media screen and (min-width: 1024px) {
+                width: 33%;
+                height: auto;
+            }
+        }
+        &--title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.16rem;
+            @media screen and (min-width: 1024px) {
+                font-size: 1.5rem;
+                margin-bottom: 1.22rem;
+            }
+        }
+        &--text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 100%;
+            @media screen and (min-width: 1024px) {
+                justify-content: center;
+                text-align: left;
+                width: 45%;
+            }
+        }
+    }
+}
